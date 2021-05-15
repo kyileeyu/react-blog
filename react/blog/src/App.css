@@ -16,6 +16,25 @@ body{
   padding: 20px;
   background: #eee;
 }
+
+/* 글발행 */
+.publish{
+  margin:30px 0;
+/* 앞:위아래& 뒤:양옆 */
+}
+.publish input{
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 80%;
+  border: 1px solid grey;
+}
+.publish button{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
 .black-nav{
   background:black;
   width: 100%;
