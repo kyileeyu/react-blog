@@ -18,8 +18,8 @@ function App() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link> <Link to="/">Home</Link></Nav.Link>
-          <Nav.Link><Link to="/detail">Detail</Link></Nav.Link>
+          <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link  as={Link} to="/detail">Detail</Nav.Link>
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -61,9 +61,14 @@ function App() {
         <Detail shoes={shoes}/>
     </Route>
 
+    {/* <Route path="/:id">
+      <div>아무거나 적었을 때 이거 보여주셈</div>
+    </Route> */}
+{/* <Routh path="/어쩌구" component={Modal} > </Routh> */}
   </div>
   )
 }
+
 
 function Card(props){
   return(
