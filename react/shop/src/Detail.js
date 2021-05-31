@@ -16,13 +16,11 @@ let ti =styled.h4`
 function Detail(props){
 
     useEffect(()=>{
-
-        console.log(11111)
+        let timer = setTimeout(()=>{alertch(false) },2000);
     });
     
-
-
-
+    let [alert,alertch]=useState(true);
+    
     let { id }= useParams();
     let finditem = props.shoes.find(function(item){
         return item.id == id
@@ -39,9 +37,14 @@ function Detail(props){
                 <ti className="red">Detail</ti>
             </box>
 
-            <div className="my-alert2">
-                <p>재고가 얼마남지 않았습니다</p>
-            </div>
+            {
+                alert == true
+                ? (<div className="my-alert2">
+                        <p>재고가 얼마남지 않았습니다</p>
+                    </div>)
+                : null
+            }
+            
            
             
             <div className="row">

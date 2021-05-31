@@ -4,6 +4,7 @@ import './App.css';
 import React,{ useState } from 'react';
 import Data from './Data.js';
 import Detail from './Detail.js';
+import axios from 'axios';
  
 import { Link, Route, Switch } from 'react-router-dom';
 
@@ -61,6 +62,19 @@ function App() {
         <Detail shoes={shoes}/>
     </Route>
 
+    <button className="btn btn-primary" onClick={() => {
+      
+      axios.get('https://codingapple1.github.io/shop/data2.json')
+      .then((result)=>{
+        console.log(result.data)
+        shoesCH( [...shoes, ...result.data] );
+      })
+      .catch(()=>{ 
+        console.log('실패했어요')
+
+      })
+    }
+    }> 더보기 </button>
     {/* <Route path="/:id">
       <div>아무거나 적었을 때 이거 보여주셈</div>
     </Route> */}
