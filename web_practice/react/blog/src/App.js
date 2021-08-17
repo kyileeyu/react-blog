@@ -77,9 +77,9 @@ function App() {
 
 
       { 
-         modal === true 
-         ? <Modal 글제목={글제목} 누른제목={누른제목}></Modal>
-         : null
+         
+         <Modal 글제목={글제목} 누른제목={누른제목}></Modal>
+  
       } 
     </div> 
   );
